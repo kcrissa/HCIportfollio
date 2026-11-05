@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crissa Mae Villegas | IT Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Anton (Massive), Montserrat (Display), Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFACD',
+                        denim: '#6B82A8',
+                        navy: '#1a2639',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        massive: ['Anton', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Animations */
+        body {
+            background-color: #FFFACD;
+            color: #1a2639;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Reveal Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* Editorial Borders */
+        .mag-border { border: 2px solid #6B82A8; }
+    </style>
+</head>
+<body class="bg-cream text-denim font-sans antialiased selection:bg-denim selection:text-cream overflow-x-hidden flex flex-col min-h-screen">
+    
+    <!-- Top Navigation -->
+    <nav class="w-full border-b-2 border-denim py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-cream z-50">
+        <div class="font-display font-black text-xl tracking-widest text-denim uppercase">
+            sammie
+        </div>
+        <div class="hidden md:flex gap-8 font-display font-bold text-xs tracking-[0.2em] text-denim uppercase">
+            <a href="#about" class="hover:text-navy transition-colors">Me</a>
+            <a href="#background" class="hover:text-navy transition-colors">Background</a>
+            <a href="#skills" class="hover:text-navy transition-colors">What I'm Into</a>
+            <a href="#outlets" class="hover:text-navy transition-colors">The Good Stuff</a>
+            <a href="#process" class="hover:text-navy transition-colors">My Personality</a>
+        </div>
+        <a href="#about" class="md:hidden text-denim"><i class="ph ph-list text-2xl"></i></a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative w-full pt-12 pb-16 px-6 md:px-12">
+        <!-- DECORATIVE BACKGROUND STARS -->
+        <i class="ph-fill ph-star-four absolute top-16 left-[5%] md:left-[10%] text-denim/20 text-4xl rotate-12"></i>
+        <i class="ph-fill ph-star absolute bottom-12 left-[35%] md:left-[45%] text-denim/15 text-6xl -rotate-12"></i>
+
+        <!-- NEW: Decorative Curvy Wave Pattern (Floating in the background) -->
+        <div class="absolute bottom-24 md:bottom-40 left-[50%] md:left-[45%] -translate-x-1/2 w-72 md:w-[500px] opacity-60 z-0 rotate-[-5deg] pointer-events-none">
+            <svg viewBox="0 0 500 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto stroke-denim">
+                <!-- Top Line (Extended) -->
+                <path d="M-10,40 C50,-20 100,120 180,40 C240,-20 280,80 320,30 C380,-20 450,80 520,30" stroke-width="4" stroke-linecap="round"/>
+                <!-- Middle Line (Extended) -->
+                <path d="M-10,55 C50,-5 100,135 180,55 C240,-5 280,95 320,45 C380,-5 450,95 520,45" stroke-width="4" stroke-linecap="round" class="opacity-70"/>
+                <!-- Bottom Line (Extended) -->
+                <path d="M-10,70 C50,10 100,150 180,70 C240,10 280,110 320,60 C380,10 450,110 520,60" stroke-width="4" stroke-linecap="round" class="opacity-40"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <!-- Text Container -->
+            <div class="w-full md:w-2/3 flex flex-col justify-center relative">
+                <i class="ph-fill ph-star-four absolute -top-4 right-[10%] md:right-[20%] text-denim/25 text-3xl rotate-45"></i>
+                <h1 class="font-massive text-[20vw] md:text-[11vw] leading-[0.85] text-denim m-0 p-0 reveal tracking-normal">
+                    WELCOME!
+                </h1>
+                
+                <div class="mt-8 max-w-md reveal reveal-delay-3">
+                    <p class="font-sans text-denim text-sm md:text-base font-medium leading-relaxed border-l-4 border-denim pl-4">
+                        BSIT STUDENT<br>STILL BREATHING<br>STILL LEARNING<br>VERY MUCH ALIVE!
+                    </p>
+                    <div class="mt-6 flex gap-4 text-denim">
+                        <i class="ph-fill ph-instagram-logo text-2xl hover:text-denim/70 cursor-pointer transition-colors"></i>
+                        <i class="ph-fill ph-linkedin-logo text-2xl hover:text-denim/70 cursor-pointer transition-colors"></i>
+                        <i class="ph-fill ph-pinterest-logo text-2xl hover:text-denim/70 cursor-pointer transition-colors"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Container -->
+            <div class="w-full md:w-1/3 flex flex-col items-center md:items-end reveal reveal-delay-2 mt-8 md:mt-0 relative">
+                <i class="ph-fill ph-star-four absolute -top-12 -right-8 md:-right-16 text-denim/30 text-[120px] z-0 rotate-12"></i>
+                <div class="relative z-10 w-64 md:w-full max-w-sm aspect-[3/4] shadow-[8px_8px_0px_0px_rgba(107,130,168,1)] rotate-2 hover:rotate-0 transition-transform duration-500 rounded-3xl">
+                    <img src="profile1.jpg" alt="Crissa Mae Villegas" onerror="this.src='https://placehold.co/600x800/6B82A8/F4EFE6?text=Profile+Photo'" class="w-full h-full object-cover border-4 border-cream bg-denim/20 rounded-3xl">
+                    <div class="absolute -bottom-4 -left-4 md:-left-8 bg-cream border-2 border-denim px-6 py-2 font-display text-denim font-black uppercase tracking-widest text-sm md:text-base shadow-[4px_4px_0px_#6B82A8] -rotate-3 rounded-xl">
+                        -Wanna know more about me?
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW: Circle Scroll-Down Button (Completely OUTSIDE the picture) -->
+                <a href="#about" class="absolute -bottom-8 -right-16 md:-bottom-12 md:-right-24 w-14 h-14 md:w-16 md:h-16 bg-denim text-cream rounded-full flex items-center justify-center hover:-translate-y-1 hover:bg-navy transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(107,130,168,0.4)] border-2 border-cream z-20 group">
+                    <i class="ph-bold ph-arrow-down text-2xl group-hover:animate-bounce"></i>
+                </a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="w-full bg-denim text-cream py-20 px-6 md:px-12 border-b-4 border-cream">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="col-span-1 lg:col-span-7 flex flex-col justify-center reveal">
+                <h2 class="font-massive text-7xl md:text-[100px] text-cream mb-8 tracking-wide leading-none">Hi, I'm Crissa</h2>
+                <p class="font-sans text-lg md:text-xl mb-6 text-cream/90 max-w-xl leading-relaxed font-medium">
+                    An ordinary living thing from Boljoon, 21 years old and exploring what life has to offer. As long as I’m trying and learning something new for tomorrow, I’m exactly where I need to be.
+                </p>
+                <p class="font-display text-xl md:text-2xl text-cream font-black mb-12 uppercase tracking-wide">
+                    I believe the best way to build your future is to quietly explore the present.
+                </p>
+                <div class="grid grid-cols-3 gap-4 font-display uppercase tracking-widest text-center mt-auto">
+                    <div class="border-t-2 border-cream pt-4 reveal reveal-delay-1">
+                        <div class="text-3xl md:text-4xl font-black mb-1">3RD</div>
+                        <div class="text-[10px] md:text-xs text-cream/80 font-bold">YEAR BSIT<br>STUDENT</div>
+                    </div>
+                    <div class="border-t-2 border-cream pt-4 reveal reveal-delay-2">
+                        <div class="text-3xl md:text-4xl font-black mb-1">GO</div>
+                        <div class="text-[10px] md:text-xs text-cream/80 font-bold">WITH<br>THE FLOW</div>
+                    </div>
+                    <div class="border-t-2 border-cream pt-4 reveal reveal-delay-3">
+                        <div class="text-3xl md:text-4xl font-black mb-1">99.9%</div>
+                        <div class="text-[10px] md:text-xs text-cream/80 font-bold">PASSION TO<br>LEARN</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 lg:col-span-5 reveal reveal-delay-2 hidden lg:block">
+                <div class="border-4 border-cream p-2 bg-cream/10 rotate-[2deg] aspect-[3/4] w-full max-w-sm ml-auto">
+                    <img src="profile.jpg" alt="Crissa" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BACKGROUND & EXPERIENCE SECTION -->
+    <section id="background" class="py-16 px-6 md:px-12 max-w-7xl mx-auto text-denim relative">
+        <div class="text-center mb-12 reveal">
+            <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-3 leading-none">Background</h2>
+            <p class="font-bold tracking-widest uppercase text-xs md:text-sm text-denim/80">Education & Experience</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <!-- High School Card -->
+            <div class="relative group bg-cream border-4 border-denim flex flex-col items-start hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] rounded-3xl overflow-hidden h-full">
+                <div class="p-6 flex flex-col h-full w-full">
+                    <i class="ph-fill ph-books text-4xl mb-4 text-denim"></i>
+                    <p class="font-bold text-[10px] md:text-xs uppercase tracking-widest mb-2 opacity-80 text-denim">High School Graduate</p>
+                    <h3 class="font-display font-black text-2xl md:text-3xl uppercase mb-3 leading-tight text-denim">Patronage of Mary <br>Development School</h3>
+                    <div class="w-full h-px bg-denim/30 mb-3"></div>
+                    <p class="font-medium text-sm leading-relaxed text-denim">Where I built my foundation and spent my early years before heading to the city to pursue my college degree.</p>
+                </div>
+                <div class="absolute inset-0 bg-denim text-cream p-6 flex flex-col justify-center items-center text-center translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
+                    <div class="relative w-full max-w-[220px] h-32 mb-6 flex justify-center items-center mx-auto">
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-cream -rotate-6 -translate-x-10 shadow-md bg-cream/10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="pmdsdump.jpg" alt="High School Pic 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-cream rotate-6 translate-x-10 shadow-lg bg-cream/10 z-10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="pmdsdump2.jpg" alt="High School Pic 2" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-display font-black text-xl mb-2 uppercase">The Early Days</h4>
+                    <p class="text-sm font-medium opacity-90 leading-relaxed">Great memories, solid foundations, and the starting point before my journey into the city.</p>
+                </div>
+            </div>
+
+            <!-- College Card -->
+            <div class="relative group bg-denim text-cream border-4 border-denim flex flex-col items-start hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] rounded-3xl overflow-hidden h-full">
+                <div class="p-6 flex flex-col h-full w-full">
+                    <i class="ph-fill ph-graduation-cap text-4xl mb-4"></i>
+                    <p class="font-bold text-[10px] md:text-xs uppercase tracking-widest mb-2 text-cream/80">Currently Attending</p>
+                    <h3 class="font-display font-black text-2xl md:text-3xl uppercase mb-3 leading-tight">University of <br>Cebu</h3>
+                    <div class="w-full h-px bg-cream/30 mb-3"></div>
+                    <p class="font-medium text-sm leading-relaxed">Pursuing my Bachelor of Science in Information Technology. Expanding my skill set while balancing my creative hobbies on the side.</p>
+                </div>
+                <div class="absolute inset-0 bg-cream text-denim p-6 flex flex-col justify-center items-center text-center translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
+                    <div class="relative w-full max-w-[220px] h-32 mb-6 flex justify-center items-center mx-auto">
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-denim -rotate-6 -translate-x-10 shadow-md bg-denim/10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="ITgrind.jpg" alt="College Pic 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-denim rotate-6 translate-x-10 shadow-lg bg-denim/10 z-10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="pahugyawkicks.jpg" alt="College Pic 2" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-display font-black text-xl mb-2 uppercase">The IT Grind</h4>
+                    <p class="text-sm font-medium opacity-90 leading-relaxed">Struggling to pass major subs. Send Help :<</p>
+                </div>
+            </div>
+
+            <!-- Work Experience Card -->
+            <div class="relative group bg-cream border-4 border-denim flex flex-col items-start hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] rounded-3xl overflow-hidden h-full">
+                <div class="p-6 flex flex-col h-full w-full">
+                    <i class="ph-fill ph-briefcase text-4xl mb-4 text-denim"></i>
+                    <p class="font-bold text-[10px] md:text-xs uppercase tracking-widest mb-2 opacity-80 text-denim">Professional Experience</p>
+                    <h3 class="font-display font-black text-2xl md:text-3xl uppercase mb-3 leading-tight text-denim">Qwest BPO Inc. <br>Market Research</h3>
+                    <div class="w-full h-px bg-denim/30 mb-3"></div>
+                    <p class="font-medium text-sm leading-relaxed text-denim">Assigned to the Market Research Account here in Cebu City. Building real-world communication and analytical skills in a fast-paced environment.</p>
+                </div>
+                <div class="absolute inset-0 bg-denim text-cream p-6 flex flex-col justify-center items-center text-center translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
+                    <div class="relative w-full max-w-[220px] h-32 mb-6 flex justify-center items-center mx-auto">
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-cream -rotate-6 -translate-x-10 shadow-md bg-cream/10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="workstation.png" alt="Work Pic 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute w-28 h-28 rounded-xl overflow-hidden border-4 border-cream rotate-6 translate-x-10 shadow-lg bg-cream/10 z-10 hover:z-30 hover:scale-110 transition-all duration-300">
+                            <img src="work1.png" alt="Work Pic 2" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <h4 class="font-display font-black text-xl mb-2 uppercase">Real World Skills</h4>
+                    <p class="text-sm font-medium opacity-90 leading-relaxed">Spent 4 months navigating a fast-paced environment, gathering data, and leveling up my communication skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRENT OBSESSIONS SECTION -->
+    <section id="skills" class="w-full text-navy py-20 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-massive text-7xl md:text-[100px] text-denim mb-16 tracking-wide reveal leading-none">What I'm Into</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 items-start">
+                
+                <!-- LEFT SIDE (Buttons + 2 Little Pictures) -->
+                <div class="md:col-span-4 flex flex-col gap-4 reveal reveal-delay-1">
+                    
+                    <div class="bg-denim text-cream font-bold py-4 px-6 border-2 border-denim flex items-center gap-3 cursor-pointer transition-colors duration-300 hover:bg-transparent hover:text-denim">
+                        <i class="ph ph-camera text-xl"></i> VISUALS & DANCE
+                    </div>
+                    <div class="bg-transparent text-denim font-bold py-4 px-6 border-2 border-denim flex items-center gap-3 cursor-pointer transition-colors duration-300 hover:bg-denim hover:text-cream">
+                        <i class="ph ph-headphones text-xl"></i> CURATED PLAYLISTS
+                    </div>
+                    <div class="bg-transparent text-denim font-bold py-4 px-6 border-2 border-denim flex items-center gap-3 cursor-pointer transition-colors duration-300 hover:bg-denim hover:text-cream">
+                        <i class="ph ph-fork-knife text-xl"></i> GOOD FOOD
+                    </div>
+                    <div class="bg-transparent text-denim font-bold py-4 px-6 border-2 border-denim flex items-center gap-3 cursor-pointer transition-colors duration-300 hover:bg-denim hover:text-cream">
+                        <i class="ph ph-map-pin text-2xl"></i> GOOD PLACES
+                    </div>
+                    
+                    <!-- Two Little Pictures (Scrapbook Layout) -->
+                    <div class="mt-8 flex flex-row justify-center md:justify-start gap-4 mx-auto md:ml-4 relative z-20">
+                        <div class="relative w-36 md:w-44 aspect-square -rotate-6 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-500">
+                            <div class="w-full h-full border border-denim p-2 bg-cream shadow-sm">
+                                <img src="sunbathhaha.jpg" alt="Aesthetic Moment 1" class="w-full h-full object-cover">
+                            </div>
+                            <i class="ph-fill ph-star absolute -top-3 -right-3 text-2xl text-denim rotate-12 drop-shadow-sm"></i>
+                        </div>
+                        <div class="relative w-36 md:w-44 aspect-square rotate-6 translate-y-4 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-500">
+                            <div class="w-full h-full border border-denim p-2 bg-cream shadow-sm">
+                                <img src="sunset.jpg" alt="Aesthetic Moment 2" onerror="this.src='https://placehold.co/400x400/6B82A8/F4EFE6?text=New+Pic'" class="w-full h-full object-cover">
+                            </div>
+                            <i class="ph-fill ph-star-four absolute -bottom-3 -left-3 text-2xl text-denim -rotate-12 drop-shadow-sm"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE (Big Picture + Text + Wave) -->
+                <div class="md:col-span-8 reveal reveal-delay-2 relative flex flex-col md:flex-row gap-8 items-center">
+                    
+                    <!-- Big Picture -->
+                    <div class="w-full md:w-1/2 aspect-[3/4] border-2 border-denim p-2 bg-cream">
+                        <img src="niche.jpg" alt="Tech Niches" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Text Container -->
+                    <div class="w-full md:w-1/2 flex flex-col gap-6">
+                        <h3 class="font-display font-black text-4xl md:text-5xl text-denim uppercase leading-none">
+                            STAY QUIET, OBSERVE OFTEN, AND LET THE WORK SPEAK FOR ITSELF.
+                        </h3>
+                        <p class="text-denim/80 font-medium leading-relaxed">
+                            I am not the loudest person in the room, and I like it that way. Between taking trips back to my hometown, finding new food to try, and just chilling with my two kittens, I find my energy in the simple, quiet moments of everyday life.
+                        </p>
+                        
+                        <!-- Decorative Curvy Wave Pattern -->
+                        <div class="mt-4 w-full max-w-sm">
+                            <svg viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto stroke-denim">
+                                <path d="M-10,40 C50,-20 100,120 180,40 C240,-20 280,80 320,30" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M-10,55 C50,-5 100,135 180,55 C240,-5 280,95 320,45" stroke-width="4" stroke-linecap="round" class="opacity-70"/>
+                                <path d="M-10,70 C50,10 100,150 180,70 C240,10 280,110 320,60" stroke-width="4" stroke-linecap="round" class="opacity-40"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIFE & OUTLETS SECTION -->
+    <section id="outlets" class="py-16 px-6 md:px-12 w-full relative z-10">
+        <div class="bg-denim rounded-[40px] p-8 md:p-12 max-w-6xl mx-auto shadow-[8px_8px_0px_0px_rgba(107,130,168,0.4)] text-cream border-4 border-denim/50">
+            <div class="text-center mb-10 reveal">
+                <h2 class="font-display font-black text-5xl md:text-6xl uppercase mb-2 leading-none text-cream">THE GOOD STUFF</h2>
+                <p class="font-bold tracking-widest uppercase text-xs md:text-sm text-cream/80">Hobbies, Habits, & Everyday Moments</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Box 1 -->
+                <div class="bg-cream text-denim rounded-3xl p-5 flex flex-col hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 border-2 border-denim/20">
+                        <img src="visual&arts.jpg" alt="Visual Editing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="px-2 pb-1">
+                        <h4 class="font-display font-black uppercase text-xl mb-1">Visual Editing</h4>
+                        <p class="font-sans text-sm font-medium leading-relaxed opacity-90">
+                            Years ago, I loved grabbing a pencil and paper to sketch people's faces. I also did some video editing back then.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="bg-cream text-denim rounded-3xl p-5 flex flex-col hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 border-2 border-denim/20">
+                        <img src="kitten.jpg" alt="My Kittens" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="px-2 pb-1">
+                        <h4 class="font-display font-black uppercase text-xl mb-1">Say hi to Cleo!</h4>
+                        <p class="font-sans text-sm font-medium leading-relaxed opacity-90">
+                            My daily dose of chaos and comfort. Coming home to these two after a long day of classes or work makes everything better.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="bg-cream text-denim rounded-3xl p-5 flex flex-col hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+                    <div class="w-full aspect-square rounded-2xl overflow-hidden mb-4 border-2 border-denim/20">
+                        <img src="province2.jpg" alt="Exploring" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="px-2 pb-1">
+                        <h4 class="font-display font-black uppercase text-xl mb-1">Out & About</h4>
+                        <p class="font-sans text-sm font-medium leading-relaxed opacity-90">
+                            Whether it's finding a quiet spot to study, going on a food trip, or enjoying the scenery down south in Boljoon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY PERSONALITY SECTION -->
+    <section id="process" class="w-full py-20 relative">
+        
+        <!-- DECORATIVE STARS -->
+        <i class="ph-fill ph-star-four absolute -top-10 -left-10 md:top-10 md:left-10 text-denim/10 text-[180px] -rotate-12 z-0"></i>
+        <i class="ph-fill ph-star absolute top-16 right-[5%] md:right-[15%] text-denim/15 text-6xl rotate-45 z-0"></i>
+        <i class="ph-fill ph-star-four absolute bottom-24 left-[45%] text-denim/20 text-4xl rotate-12 z-0"></i>
+        <i class="ph-fill ph-star absolute bottom-12 right-[10%] md:right-[5%] text-denim/15 text-5xl -rotate-12 z-0"></i>
+
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-16 items-center relative z-10">
+            
+            <!-- Left Side: My Personality -->
+            <div class="w-full md:w-1/2 pr-0 md:pr-10 flex flex-col justify-center reveal">
+                <h2 class="font-massive text-6xl md:text-7xl lg:text-8xl text-denim mb-6 tracking-wide leading-[0.9]">MY<br>PERSONALITY</h2>
+                <p class="font-sans text-denim/90 font-medium text-sm md:text-base leading-relaxed max-w-md">
+                    I’m all about keeping things uncomplicated. I try not to overthink the little things, and just let every new experience teach me something for whatever comes next.
+            </div>
+            
+            <!-- Right Side: Process Cards -->
+            <div class="w-full md:w-1/2 space-y-5">
+                
+                <div class="flex items-start gap-4 reveal reveal-delay-1 bg-cream p-5 border-4 border-denim rounded-3xl hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] group">
+                    <div class="w-12 h-12 bg-denim rounded-full flex items-center justify-center font-display font-black text-cream text-lg shrink-0 group-hover:scale-110 transition-transform duration-300">01</div>
+                    <div>
+                        <h3 class="font-display text-xl font-black uppercase mb-1 text-denim leading-tight">THE SIMPLE JOYS</h3>
+                        <p class="font-sans text-sm text-denim/90 font-medium leading-relaxed">Good food, a solid playlist, and coming home to my parents. Life really doesn't need to be complicated to be good.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 reveal reveal-delay-2 bg-cream p-5 border-4 border-denim rounded-3xl hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] group">
+                    <div class="w-12 h-12 bg-denim rounded-full flex items-center justify-center font-display font-black text-cream text-lg shrink-0 group-hover:scale-110 transition-transform duration-300">02</div>
+                    <div>
+                        <h3 class="font-display text-xl font-black uppercase mb-1 text-denim leading-tight">GOING AT MY OWN PACE</h3>
+                        <p class="font-sans text-sm text-denim/90 font-medium leading-relaxed">Living with a laid-back approach. I believe that as long as I wake up and keep trying, I am exactly where I need to be.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 reveal reveal-delay-3 bg-cream p-5 border-4 border-denim rounded-3xl hover:-translate-y-2 transition-transform duration-300 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] group">
+                    <div class="w-12 h-12 bg-denim rounded-full flex items-center justify-center font-display font-black text-cream text-lg shrink-0 group-hover:scale-110 transition-transform duration-300">03</div>
+                    <div>
+                        <h3 class="font-display text-xl font-black uppercase mb-1 text-denim leading-tight">ALWAYS EXPLORING</h3>
+                        <p class="font-sans text-sm text-denim/90 font-medium leading-relaxed">Whether I am learning a new language, making art, or just exploring the province, I am always picking up lessons for tomorrow.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITAL GUESTBOOK SECTION -->
+    <section id="guestbook" class="w-full py-16 px-6 relative z-10 flex flex-col items-center">
+        
+        <!-- The Note Box -->
+        <div class="max-w-2xl w-full mx-auto bg-cream border-4 border-denim rounded-[32px] p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(107,130,168,1)] relative reveal">
+
+            <!-- Decorative Pin -->
+            <i class="ph-fill ph-push-pin absolute -top-5 md:-top-6 -left-3 md:-left-5 text-4xl md:text-5xl text-denim rotate-[-20deg] drop-shadow-md"></i>
+            <!-- Small floating star -->
+            <i class="ph-fill ph-star-four absolute -bottom-6 -right-6 text-5xl text-denim/20 rotate-12 z-0"></i>
+
+            <div class="text-center mb-6 relative z-10">
+                <h2 class="font-massive text-4xl md:text-5xl text-denim mb-2 uppercase leading-none">You can Leave a Note</h2>
+                <p class="font-sans font-medium text-denim/80 text-xs md:text-sm">
+                    What's your vibe? Drop a comment, share your thoughts, or just say hi!
+                </p>
+            </div>
+
+            <form action="#" method="POST" class="flex flex-col gap-5 relative z-10">
+                
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="font-display font-black text-[10px] md:text-xs tracking-widest text-denim uppercase block mb-1">Your Name</label>
+                    <input type="text" id="name" placeholder="Who are you?" class="w-full bg-transparent border-b-[3px] border-denim text-denim font-sans font-medium text-base py-1.5 px-1 focus:outline-none placeholder:text-denim/30 transition-colors focus:border-navy">
+                </div>
+
+                <!-- Message Field -->
+                <div>
+                    <label for="message" class="font-display font-black text-[10px] md:text-xs tracking-widest text-denim uppercase block mb-1">Your Thoughts</label>
+                    <textarea id="message" rows="3" placeholder="Say whatever you want..." class="w-full bg-transparent border-[3px] border-denim rounded-xl text-denim font-sans font-medium text-sm p-3 focus:outline-none focus:bg-denim/5 placeholder:text-denim/30 resize-none transition-colors"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="self-end bg-denim text-cream font-display font-black uppercase tracking-widest px-6 py-3 text-xs rounded-full hover:-translate-y-1 hover:bg-navy transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(107,130,168,0.4)] border-2 border-cream mt-2 flex items-center gap-2 group">
+                    Send It <i class="ph-bold ph-paper-plane-tilt text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                </button>
+                
+            </form>
+        </div>
+
+        <!-- NEW MOVED ELEMENT: Socials & Connect Button -->
+        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6 reveal">
+            <a href="#" class="inline-flex items-center gap-2 bg-denim text-cream px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:-translate-y-1 hover:bg-navy transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(107,130,168,0.4)] border-2 border-cream">
+                Let's Connect <i class="ph-bold ph-arrow-right"></i>
+            </a>
+            
+            <div class="flex gap-4 text-denim text-3xl">
+                <a href="#" class="hover:-translate-y-1 transition-transform hover:text-denim/70"><i class="ph-fill ph-facebook-logo"></i></a>
+                <a href="#" class="hover:-translate-y-1 transition-transform hover:text-denim/70"><i class="ph-fill ph-envelope"></i></a>
+                <a href="#" class="hover:-translate-y-1 transition-transform hover:text-denim/70"><i class="ph-fill ph-x-logo"></i></a>
+                <a href="#" class="hover:-translate-y-1 transition-transform hover:text-denim/70"><i class="ph-fill ph-tiktok-logo"></i></a>
+                <a href="#" class="hover:-translate-y-1 transition-transform hover:text-denim/70"><i class="ph-fill ph-telegram-logo"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER (Pushed to bottom, full width, no gaps) -->
+    <footer class="w-full mt-auto pt-16 pb-12 md:pb-16 relative overflow-hidden bg-[#1A2135]">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
+            <h3 class="font-display font-black text-xl md:text-2xl uppercase tracking-widest text-cream z-10 text-center m-0">
+                HCI PORTFOLIO
+            </h3>
+        </div>
+        <!-- Decorative stars in footer -->
+        <i class="ph-fill ph-star absolute text-4xl text-cream/5 top-4 left-10 md:left-32 rotate-12"></i>
+        <i class="ph-fill ph-star absolute text-5xl text-cream/5 bottom-2 right-10 md:right-32 -rotate-12"></i>
+    </footer>
+
+    <!-- Intersection Observer Script for Reveal Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        });
+    </script>
+</body>
+</html>
